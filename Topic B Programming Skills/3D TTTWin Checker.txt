@@ -1,0 +1,64 @@
+
+print(" 2D Win Checker ")
+print("================")
+print(" ")
+
+"""
+Defile the list of winning combinations
+"""
+winCombos = [
+  [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]
+]
+
+"""
+Initialize an empty game board
+"""
+gameBoard =  [" "] * 9
+"""
+for i in range(9) :0
+  gameBoard[i] = " "
+"""
+
+"""
+Load the board with a user defined move pattern
+"""
+pos1 = int(input("Enter a position for move 1:"))
+gameBoard[pos1] = "X"
+pos2 = int(input("Enter a position for move 2:"))
+gameBoard[pos2] = "X"
+pos3 = int(input("Enter a position for move 3:"))
+gameBoard[pos3] = "X"
+
+"""
+Check for a winning combo
+"""
+win = False
+for combo in winCombos :
+  if((gameBoard[combo[0]] == "X") and 
+     (gameBoard[combo[0]] == gameBoard[combo[1]]) and 
+     (gameBoard[combo[0]] == gameBoard[combo[2]])) :
+     win = True
+     break
+
+print(" ")
+if win == True :
+  print("Win for X!")
+else :
+  print("Not a winning combo.")
+
+
+
+
+Java Code Suggestions
+======================
+
+int[][] winCombos = {
+          {0,1,2}, {3,4,5}, {6,7,8}, {0,3,6}, {1,4,7}, {2,5,8}, {0,4,8}, {2,4,6}
+        };
+
+for (i = 0; i < winCombos.length(); i++) {
+    int[] combo = winCombo[i];
+    if (combo[0] == "X") {
+       etc...
+    };
+};

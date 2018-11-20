@@ -1,0 +1,16 @@
+
+
+print(" 3D TicTacToe Move Position Mapper ")
+print("===================================")
+print(" ")
+rawNumber = int(input("Enter a move position: "))
+print(" ")
+level = int(rawNumber / 9)
+remainder = rawNumber % 9
+row = int(remainder / 3)
+col = remainder % 3
+print("level = ", level)
+print("row = ", row)
+print("column = ", col)
+
+
